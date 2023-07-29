@@ -2,11 +2,11 @@ import random
 from replit import clear
 
 print("Welcome to Silent/Blind Auction 🔨 🔨 🔨 ")
-StartingBid = int(input("Starting Bid is: "))
+StartingBid = int(input("Starting Bid is: $"))
 BiddingList = {}
 
 name = input("Please Enter your name : ")
-Amount = input("Please, place your bid: ")
+Amount = input("Please, place your bid: $")
 BiddingList[name] = Amount
 
 StopBidding = False
@@ -31,4 +31,4 @@ for key in BiddingList:
 
 print(BiddingList)
 
-print(f"Congratulations !! {Winner}. You Bid {WinnerAmount} and have won.")
+print(f"Congratulations !! {Winner}. You Bid ${WinnerAmount} and have won.")
