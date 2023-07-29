@@ -6,7 +6,7 @@ StartingBid = int(input("Starting Bid is: $"))
 BiddingList = {}
 
 name = input("Please Enter your name : ")
-Amount = input("Please, place your bid: $")
+Amount = int(input("Please, place your bid: $"))
 BiddingList[name] = Amount
 
 StopBidding = False
@@ -25,7 +25,7 @@ WinnerAmount = 0
 Winner = ""
 
 for key in BiddingList:
-  if int(BiddingList[key]) > WinnerAmount:
+  if BiddingList[key] > WinnerAmount:
     WinnerAmount = int(BiddingList[key])
     Winner = key
 
