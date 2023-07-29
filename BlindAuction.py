@@ -31,4 +31,4 @@ for key in BiddingList:
 
 print(BiddingList)
 
-print(f"Congratulations !! {Winner}. You Bid ${WinnerAmount} and have won.")
+print(f"Congratulations {Winner} !!. You Bid ${WinnerAmount} and have won.")
