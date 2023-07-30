@@ -22,6 +22,11 @@ Operations = {
 }
 
 num1 = int(input("Please, Enter the first number?: "))
-ops = input("Enter the operation, you want to perform: ")
-num2 = int(input("Please, Enter the Second number?:  "))
-print(Operations[ops](num1,num2))
+ops = input("Operation: ")
+
+while ops != "=":
+  num2 = int(input("Number Please: "))
+  num1 = Operations[ops](num1,num2)
+  ops = input("Next Operation: ")
+
+print(num1)
