@@ -32,6 +32,15 @@
 
 #Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
 #11 is the Ace.
+print("""
+______ _            _        ___            _    
+| ___ \ |          | |      |_  |          | |   
+| |_/ / | __ _  ___| | __     | | __ _  ___| | __
+| ___ \ |/ _` |/ __| |/ /     | |/ _` |/ __| |/ /
+| |_/ / | (_| | (__|   <  /\__/ / (_| | (__|   < 
+\____/|_|\__,_|\___|_|\_\ \____/ \__,_|\___|_|\_\
+                                                 
+                                                """)
 import random
 from replit import clear
 from art import logo
