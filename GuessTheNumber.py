@@ -9,25 +9,28 @@ print("""
  \____/\__,_|\___||___/___/   \_/ |_| |_|\___| \_| \_/\__,_|_| |_| |_|_.__/ \___|_|
  """);
 
+EASY_LEVEL_ATTEMPTS = 15
+MEDIUM_LEVEL_ATTEMPTS = 10
+HIGH_LEVEL_ATTEMPTS = 5
+
 MaxNum = int(input("Choose the maximum number for the game: "))
 RandomNumber = random.randint(1,MaxNum)
-print(RandomNumber)
 
 def ChooseDifficulty():
     print("Difficulty Levels are High, Medium, Low")
     Diff = input("Choose the Difficulty leel: ")
     if Diff == "High":
-        NumberOfChances = 5
+        NumberOfChances = HIGH_LEVEL_ATTEMPTS
     elif Diff == "Medium":
-        NumberOfChances = 10
+        NumberOfChances = MEDIUM_LEVEL_ATTEMPTS
     elif Diff == "Low":
-        NumberOfChances = 15
+        NumberOfChances = EASY_LEVEL_ATTEMPTS
     return NumberOfChances
 
 def Validate():
   difference = guess - RandomNumber 
   if difference == 0:
-    print("Congratulations!. You Guess it right")
+    print("Congratulations!. You Guessed it right")
     return 0
   elif difference >= 10:
     print("Too High")
@@ -51,4 +54,6 @@ while Lives > 0:
   else:
     Lives = Lives -1
 
-print(RandomNumber)
+if Lives == 0:
+  print("Sorry!! Try again.")
+  print(f"The correct number is {RandomNumber}")
