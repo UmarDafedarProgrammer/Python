@@ -11,6 +11,7 @@ print("""
 
 MaxNum = int(input("Choose the maximum number for the game: "))
 RandomNumber = random.randint(1,MaxNum)
+print(RandomNumber)
 
 def ChooseDifficulty():
     print("Difficulty Levels are High, Medium, Low")
@@ -36,7 +37,7 @@ def Validate():
     print("High")
   elif difference < -5 and difference > -10:
     print("Low")
-  elif difference < 5 and difference > -5:
+  elif difference <= 5 and difference >= -5:
     print("Near")
   return 1
 
@@ -49,3 +50,5 @@ while Lives > 0:
     break
   else:
     Lives = Lives -1
+
+print(RandomNumber)
