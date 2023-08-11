@@ -28,5 +28,8 @@ class Ball(Turtle):
     self.goto(0,0)
     self.color("white")
     self.write("Game Over!",align=ALIGNMENT,font=FONT)
+
+  def reset_position(self):
+    self.goto(0,0)
     
     
