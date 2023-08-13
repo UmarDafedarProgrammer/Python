@@ -1,3 +1,7 @@
+import csv
+import pandas
+
+##### manual Efforts
 file = open("weather_data.csv",mode="r")
 content = file.readlines()
 
@@ -5,8 +9,7 @@ for i in content:
   stripped_content = i.strip()
   print(stripped_content)
 
-import csv
-
+##### using csv
 with open("weather_data.csv") as data_file:
   data = csv.reader(data_file)
   skip_heading = True
@@ -19,3 +22,7 @@ with open("weather_data.csv") as data_file:
       print(int(row[1]))
 
   print(temperatures)
+
+##### Using Pandas
+data = pandas.read_csv("weather_data.csv")
+print(data)
