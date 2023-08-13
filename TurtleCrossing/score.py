@@ -1,5 +1,5 @@
 from turtle import Turtle
-FILENAME = "highest_level.txt"
+FILENAME = "highest_score.txt"
 
 class Score(Turtle):
 
