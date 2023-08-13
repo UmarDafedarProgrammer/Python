@@ -1,5 +1,7 @@
 from turtle import Turtle
+
 FILENAME = "highest_score.txt"
+
 
 class Score(Turtle):
 
@@ -20,10 +22,10 @@ class Score(Turtle):
     return high_score
 
   def update_highest_score(self):
-    file = open(FILENAME,mode="w")
+    file = open(FILENAME, mode="w")
     file.write(str(self.level))
     file.close()
-    
+
   def update_score(self):
     self.clear()
     self.write(f"Level: {self.level}  Highest Level: {self.highest_level}",
@@ -34,14 +36,13 @@ class Score(Turtle):
     self.level += 1
     self.update_score()
     self.update_highest_level()
-    
+
   def update_highest_level(self):
     if self.level > self.highest_level:
       self.highest_level = self.level
     self.update_score()
 
   def game_over(self):
-    if self.level > self.highest_level:
-      self.update_highest_score()
+    self.update_highest_score()
     self.goto(0, 0)
     self.write("Game Over!", align="left", font=("Courier", 24, "normal"))
